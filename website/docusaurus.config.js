@@ -174,18 +174,6 @@ module.exports = {
       },
       copyright: `Copyright © ${new Date().getFullYear()} Weaveworks`,
     },
-    algolia: {
-      appId: "Z1KEXCDHZE",
-      apiKey: process.env.ALGOLIA_API_KEY,
-      indexName: "weave",
-      // Needed to handle the different versions of docs
-      contextualSearch: true,
-
-      // Optional: Algolia search parameters
-      // searchParameters: {
-      //   facetFilters: ['type:content']
-      // },
-    },
   },
   scripts: [
     {
@@ -219,10 +207,6 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
-        },
-        gtag: {
-          trackingID: process.env.GA_KEY,
-          anonymizeIP: true, // Should IPs be anonymized?
         },
         sitemap: {
             changefreq: 'weekly',
